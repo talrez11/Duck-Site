@@ -1,0 +1,50 @@
+/**
+ * Main Style Sheet
+ * Duck - Site
+ * Author: Tal Reznic
+ */
+
+@font-face {
+	font-family: 'Alef';
+	font-style: Regular;
+	font-weight: 400;
+	src: url(../images/fonts/Alef-Regular.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'Alef';
+	font-style: bold;
+	font-weight: 700;
+	src: url(../images/fonts/Alef-Bold.ttf) format('ttf');
+}
+
+
+@color_ac_black: #231f20;
+@color_ac_white: white;
+@color_ac_grey: #f4f2f4;
+@text_color: #5d5a26;
+@color_border_green: #5d5a26;
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+body {
+	background-color: white;
+	color: @color_text;
+	font-family: 'Alef', sans-serif;
+}
+input,
+select,
+textarea,
+button {
+	font-family: 'Alef', sans-serif;
+	font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Alef', sans-serif;
+	font-weight: 700;
+	color: @color_ac_blue;
+}
