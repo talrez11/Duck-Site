@@ -5,11 +5,12 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<link href='https://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<h1>ללא שימוש בטכניקות של האכלה בכפיה, אנטיביוטיקה, הורמונים או מזרזי גדילה.</h1>
 		</body>
 	</html>
 </document>
