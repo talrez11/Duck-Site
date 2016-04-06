@@ -152,3 +152,35 @@ section#video div.video.transit {
 section#video div.video.visible {
 	right: 0%;
 }
+
+section#video p {
+	font-size: 2em;
+	padding-top: 100px;
+	color: @color_ac_white;
+}
+
+section#video label {
+	display: inline-block;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 45px;
+	padding-right: 45px;
+	border-radius: 10px;
+	border: 2px solid @color_ac_white;
+	background-color: @color_ac_orange;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+section#video label:hover {
+	background-color: fade(@color_ac_orange, 70%);
+}
+
+section#video label input {
+	display: none;
+}
+
+section#video label span {
+	font-size: 1.7em;
+	color: @color_ac_white;
+}
