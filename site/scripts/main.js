@@ -51,6 +51,13 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// create page control for video gallery
+	Site.video_slider = new PageControl('div.video_container', 'div.video');
+	Site.video_slider
+		.attachPreviousControl($('a.previous_video'))
+		.attachNextControl($('a.next_video'))
+		.setWrapAround(true);
 };
 
 

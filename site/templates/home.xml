@@ -6,6 +6,7 @@
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<link href='https://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'/>
+			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -37,6 +38,21 @@
 					src="_BASEURL.'/site/images/natural-stamp.svg'"  
 					alt="stamp" 
 					cms:eval="src"/>
+			</section>
+
+			<section id="video">
+				<h2><cms:text constant="title_video"/></h2>
+
+				<a href="javascript:void(0)" class="previous_video"></a>
+				<div class="video_container">
+					<cms:module
+						name="youtube"
+						action="show_list"
+						group_text_id="videos"
+						template="parts/video.xml"
+						/>
+				</div>
+				<a href="javascript:void(0)" class="next_video"></a>
 			</section>
 		</body>
 	</html>
