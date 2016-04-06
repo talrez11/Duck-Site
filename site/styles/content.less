@@ -1,0 +1,83 @@
+/**
+ * Main Style Sheet
+ * Duck Site
+ * Authors:Tal Reznic
+ */
+section#features {
+	display: block;
+	padding:20px calc(~'(100vw - 1200px)'/ 2);
+}
+
+section#features ul {
+	display: block;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	margin-top: -80px;
+	margin-bottom: 40px;
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section#features ul li {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 20px;
+	background-image: url(../images/features-background-for-feature.jpg);
+	background-repeat: repeat;
+	background-position: center center;
+	background-size: 300px 320px;
+	border: 1px solid @color_features_border;
+	width: calc(~'(25% - 2px)');
+	min-height: 280px;
+}
+
+section#features ul li:hover img {
+	border-color: @color_ac_orange;
+	opacity: 1;
+}
+
+section#features ul li a {
+	display: block;
+	text-decoration: none;
+}
+
+section#features ul li a img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid @color_ac_white;
+	opacity: 0.8;
+	transition: all 0.6s;
+}
+
+section#features ul li a h4,
+section#features ul li a p {
+	margin: 0px;
+	font-weight: 400;
+	color: @color_text;
+}
+
+section#features ul li a h4 {
+	font-size: 1.5em;
+}
+
+section#features img.stamp,
+section#features article {
+	display: inline-block;
+	vertical-align: top;
+}
+
+section#features article {
+	width: 70%;
+}
+
+section#features article p {
+	font-size: 1.5em;
+}
+
+section#features img.stamp {
+	width: 25%;
+	margin-right: 5%;
+}

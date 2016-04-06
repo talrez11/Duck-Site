@@ -1,0 +1,8 @@
+<document>
+	<li>
+		<a href="javascript:void(0)">
+			<img src="$params['image']" alt="$params['title'][$language]" cms:eval="src,alt"/>
+			<cms:markdown param="description" multilanguage="yes"/>
+		</a>
+	</li>
+</document>
