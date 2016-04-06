@@ -10,7 +10,8 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>ללא שימוש בטכניקות של האכלה בכפיה, אנטיביוטיקה, הורמונים או מזרזי גדילה.</h1>
+			<!-- Top section of the site -->
+			<cms:template file="parts/header.xml"/>
 		</body>
 	</html>
 </document>

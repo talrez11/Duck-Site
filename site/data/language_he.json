@@ -1,3 +1,8 @@
 {
-    "site_title": "Duck site"
+    "site_title": "Duck site",
+    "menu_about": "אודותינו",
+    "menu_growth": "הגידול שלנו",
+    "menu_location": "איפה?",
+    "menu_testimonial": "חוויות",
+    "menu_contact": "צור קשר"
 }
