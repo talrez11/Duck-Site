@@ -52,6 +52,20 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	//Scroll Function
+	$('a[href*="#"]').bind('click', function(e) {
+		e.preventDefault(); //prevent the "normal" behaviour which would be a "hard" jump
+
+		var target = $(this).attr("href"); //Get the target
+
+	// perform animated scrolling by getting top-position of target-element and set it as scroll target
+		$('html, body').stop().animate({ scrollTop: $(target).offset().top - 170 }, 1000, function() {
+		     // location.hash = target;  //attach the hash (#jumptarget) to the pageurl
+		});
+
+		return false;
+	   });
+
 	// create page control for video gallery
 	Site.video_slider = new PageControl('div.video_container', 'div.video');
 	Site.video_slider
