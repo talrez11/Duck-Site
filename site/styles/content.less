@@ -27,6 +27,21 @@ section#recipes {
 	max-height: 0px;
 	opacity: 0;
 	transition: max-height 0.6s, opacity 0.2s;
+	position: relative;
+}
+
+section#recipes:before {
+	content: "";
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	margin-left: -475px;
+	background-image: url(../images/shadow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 970px;
+	height: 60px;
+	z-index: 0;
 }
 
 section#recipes.visible {
@@ -243,20 +258,6 @@ section#recipes div.recipe_wrapper {
 
 section#recipes.visible div.recipe_wrapper {
 	min-height: 900px;
-}
-
-section#recipes div.recipe_wrapper:before {
-	content: "";
-	position: absolute;
-	bottom: 0px;
-	left: 50%;
-	margin-left: -475px;
-	background-image: url(../images/shadow.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	width: 970px;
-	height: 60px;
-	z-index: -1;
 }
 
 section#recipes h2 {
