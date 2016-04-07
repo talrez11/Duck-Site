@@ -4,16 +4,26 @@
  * Authors:Tal Reznic
  */
 
+section#grow,
 section#recipes,
 section#video,
 section#features {
 	display: block;
-	padding:20px calc(~'(100vw - 1200px)'/ 2);
+	padding: 20px calc(~'(100vw - 1200px)'/ 2);
 	text-align: center;
+}
+
+section#grow {
+	padding: 100px calc(~'(100vw - 800px)'/ 2);
+	background-image: url(../images/texture-middle.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 500px;
 }
 
 section#recipes {
 	background-color: @color_ac_grey;
+	padding: 0px;
 	max-height: 0px;
 	opacity: 0;
 	transition: max-height 0.6s, opacity 0.2s;
@@ -21,8 +31,9 @@ section#recipes {
 
 section#recipes.visible {
 	max-height: 900px;
+	padding:20px calc(~'(100vw - 1200px)'/ 2);
 	opacity: 1;
-	transition: max-height 0.6s, opacity 0.7s;
+	transition: max-height 0.6s, opacity 0.3s;
 }
 
 section#video {
@@ -284,4 +295,13 @@ article.recipe p.title {
 
 article.recipe p {
 	font-size: 1.3em;
+}
+
+section#grow h2 {
+	font-weight: 400;
+	font-size: 2.5em;
+}
+
+section#grow p {
+	font-size: 1.5em;
 }

@@ -66,7 +66,7 @@
 					<a href="javascript:void(0)" class="previous_recipe"></a>
 					<h2><cms:text constant="title_recipe"/></h2>
 					<a href="javascript:void(0)" class="next_recipe"></a>
-					
+
 					<cms:module
 						name="articles"
 						action="show_list"
@@ -74,6 +74,15 @@
 						template="parts/recipe_article.xml"
 						/>
 				</div>
+			</section>
+
+			<section id="grow">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="grow"
+					template="parts/article.xml"
+					/>
 			</section>
 		</body>
 	</html>
