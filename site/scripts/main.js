@@ -64,12 +64,11 @@ Site.on_load = function() {
 	Site.recipe_slider
 		.attachPreviousControl($('a.previous_recipe'))
 		.attachNextControl($('a.next_recipe'))
-		.setAutoResize(true)
 		.setWrapAround(true);
 
 	// function for displaying recipe section
 	var input = $('input#recipe');
-	var recipe_container = $('div.recipe_wrapper');
+	var recipe_container = $('section#recipes');
 	input.on('change', function() {
 		if(this.checked) {
 			recipe_container.addClass('visible');
