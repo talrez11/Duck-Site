@@ -86,9 +86,29 @@
 					/>
 			</section>
 
-			<section id="map">
-				
-			</section>
+			<section id="map"></section>
+
+			<!-- Bottom part of the site -->
+			<footer>
+				<h2><cms:text constant="title_testimonial"/></h2>
+				<div class="testimonial_container">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="testimonials"
+						template="parts/testimonial_article.xml"
+						/>
+				</div>
+
+				<div class="form_wrap">
+					<cms:text constant="title_form"/>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+				</div>
+			</footer>
 		</body>
 	</html>
 </document>
