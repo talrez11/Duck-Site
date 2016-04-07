@@ -4,11 +4,16 @@
  * Authors:Tal Reznic
  */
 
+section#recipes,
 section#video,
 section#features {
 	display: block;
 	padding:20px calc(~'(100vw - 1200px)'/ 2);
 	text-align: center;
+}
+
+section#recipes {
+	background-color: @color_ac_grey;
 }
 
 section#video {
@@ -24,7 +29,7 @@ section#video:before {
 	content: "";
 	position: absolute;
 	left: 0px;
-	bottom: 0px;
+	bottom: -1px;
 	background-image: url(../images/video-grunge-bottom-vector.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -136,6 +141,8 @@ section#video div.video_container {
 	position: relative;
 }
 
+section#recipes a.next_recipe,
+section#recipes a.previous_recipe,
 section#video a.previous_video,
 section#video a.next_video {
 	display: inline-block;
@@ -150,6 +157,7 @@ section#video a.next_video {
 	transition: all 0.3s;
 }
 
+section#recipes a.next_recipe,
 section#video a.next_video {
 	transform: rotate(180deg);
 }
@@ -199,4 +207,72 @@ section#video label input {
 section#video label span {
 	font-size: 1.7em;
 	color: @color_ac_white;
+}
+
+section#recipes div.recipe_wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	background-color: @color_ac_white;
+	box-shadow: 0px 0px 8px fade(@color_border_green, 50%);
+	position: relative;
+	max-height: 0px;
+	overflow: hidden;
+	transition: all 0.6s;
+}
+
+section#recipes div.recipe_wrapper.visible {
+	min-height: 900px;
+}
+
+section#recipes div.recipe_wrapper:before {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -475px;
+	background-image: url(../images/shadow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 970px;
+	height: 60px;
+	z-index: -1;
+}
+
+section#recipes h2 {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 2.8em;
+	font-weight: 400;
+}
+
+article.recipe {
+	position: absolute;
+	top: 150px;
+	right: -150%;
+	margin-right: -450px;
+	width: 900px;
+	transition: all 0.6s;
+}
+
+article.recipe.visible {
+	right: 50%;
+}
+
+article.recipe img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 45%;
+}
+
+article.recipe p.title {
+	font-size: 1.8em;
+	font-weight: 700;
+}
+
+article.recipe p {
+	font-size: 1.3em;
 }

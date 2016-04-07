@@ -58,6 +58,25 @@ Site.on_load = function() {
 		.attachPreviousControl($('a.previous_video'))
 		.attachNextControl($('a.next_video'))
 		.setWrapAround(true);
+
+	// create page control for recipes 
+	Site.recipe_slider = new PageControl('div.recipe_wrapper', 'article.recipe');
+	Site.recipe_slider
+		.attachPreviousControl($('a.previous_recipe'))
+		.attachNextControl($('a.next_recipe'))
+		.setAutoResize(true)
+		.setWrapAround(true);
+
+	// function for displaying recipe section
+	var input = $('input#recipe');
+	var recipe_container = $('div.recipe_wrapper');
+	input.on('change', function() {
+		if(this.checked) {
+			recipe_container.addClass('visible');
+		} else {
+			recipe_container.removeClass('visible');
+		}
+	});
 };
 
 

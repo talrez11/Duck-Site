@@ -60,6 +60,21 @@
 					<span><cms:text constant="button_recipe"/></span>
 				</label>
 			</section>
+
+			<section id="recipes">
+				<div class="recipe_wrapper">
+					<a href="javascript:void(0)" class="previous_recipe"></a>
+					<h2><cms:text constant="title_recipe"/></h2>
+					<a href="javascript:void(0)" class="next_recipe"></a>
+					
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="recipes"
+						template="parts/recipe_article.xml"
+						/>
+				</div>
+			</section>
 		</body>
 	</html>
 </document>
