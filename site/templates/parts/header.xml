@@ -6,10 +6,10 @@
 			</a>
 
 			<nav>
-				<a href="#"><cms:text constant="menu_about"/></a>
-				<a href="#"><cms:text constant="menu_growth"/></a>
-				<a href="#"><cms:text constant="menu_location"/></a>
-				<a href="#"><cms:text constant="menu_testimonial"/></a>
+				<a href="#features"><cms:text constant="menu_about"/></a>
+				<a href="#grow"><cms:text constant="menu_growth"/></a>
+				<a href="#map"><cms:text constant="menu_location"/></a>
+				<a href="#contact"><cms:text constant="menu_testimonial"/></a>
 				<a href="#"><cms:text constant="menu_contact"/></a>
 			</nav>
 		</div>
