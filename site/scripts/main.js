@@ -80,6 +80,14 @@ Site.on_load = function() {
 		.attachNextControl($('a.next_recipe'))
 		.setWrapAround(true);
 
+	// create page control for testimonials 
+	Site.testimonial_slider = new PageControl('div.testimonial_container', 'article.testimonial');
+	Site.testimonial_slider
+		.attachPreviousControl($('a.previous_testimonial'))
+		.attachNextControl($('a.next_testimonial'))
+		.setInterval(6000)
+		.setWrapAround(true);
+
 	// function for displaying recipe section
 	var input = $('input#recipe');
 	var recipe_container = $('section#recipes');

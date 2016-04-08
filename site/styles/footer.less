@@ -3,3 +3,135 @@
  * Duck Site
  * Authors:Tal Reznic
  */
+
+footer {
+	display: block;
+	text-align: center;
+	padding: 20px calc(~'(100vw - 1200px)'/ 2);
+	background-image: url(../images/footer-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 1460px;
+	position: relative;
+}
+
+footer:before {
+	content: "";
+	position: absolute;
+	bottom: -18px;
+	right: 360px;
+	background-image: url(../images/logo.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 490px 490px;
+	width: 490px;
+	height: 490px;
+}
+
+footer h2 {
+	font-size: 2.5em;
+	color: @color_ac_white;
+}
+
+footer a.previous_testimonial,
+footer a.next_testimonial {
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	left: 5px;
+	z-index: 100;
+	background-image: url(../images/video-arrow.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px 50px;
+	width: 20px;
+	height: 50px;
+	transition: all 0.3s;
+}
+
+footer a.previous_testimonial {
+	right: 5px;
+}
+
+footer a.next_testimonial {
+	transform: rotate(180deg);
+}
+
+div.testimonial_container {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid @color_border_green;
+	width: 960px;
+	min-height: 400px;
+	position: relative;
+}
+
+div.testimonial_container:before {
+	content: "";
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	margin-left: -475px;
+	background-image: url(../images/shadow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 970px;
+	height: 60px;
+	z-index: 0;
+}
+
+article.testimonial {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 960px;
+	height: 400px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s;
+}
+
+article.testimonial.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+article.testimonial img.testimonial_image {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	height: 400px;
+}
+
+article.testimonial div.content {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 25px;
+	background-color: @color_ac_grey;
+	width: 50%;
+	height: calc(~'(400px - 25px)');
+	overflow: hidden;
+}
+
+article.testimonial div.content img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+article.testimonial div.content p.title {
+	font-size: 1.8em;
+	font-weight: 700;
+}
+
+article.testimonial div.content p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	font-size: 1.2em;
+}
+
+article.testimonial div.content p:last-of-type {
+	font-size: 1.5em;
+}

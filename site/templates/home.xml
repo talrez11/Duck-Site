@@ -90,17 +90,20 @@
 
 			<!-- Bottom part of the site -->
 			<footer>
-				<h2><cms:text constant="title_testimonial"/></h2>
+				<h2 id="testimonial"><cms:text constant="title_testimonial"/></h2>
 				<div class="testimonial_container">
+					<a href="javascript:void(0)" class="previous_testimonial"></a>
 					<cms:module
 						name="gallery"
 						action="show_image_list"
 						group="testimonials"
 						template="parts/testimonial_article.xml"
 						/>
+					<a href="javascript:void(0)" class="next_testimonial"></a>
 				</div>
+				
 
-				<div class="form_wrap">
+				<div id="form_wrap">
 					<cms:text constant="title_form"/>
 					<cms:module
 						name="contact_form"
