@@ -73,6 +73,14 @@ Site.on_load = function() {
 		.attachNextControl($('a.next_video'))
 		.setWrapAround(true);
 
+	if(Site.is_mobile()) {
+		Site.video_mobile_slider = new PageControl('div.video_container', 'a.youtube.mobile');
+		Site.video_mobile_slider
+			.attachPreviousControl($('a.previous_video'))
+			.attachNextControl($('a.next_video'))
+			.setWrapAround(true);
+	}
+
 	// create page control for recipes 
 	Site.recipe_slider = new PageControl('div.recipe_wrapper', 'article.recipe');
 	Site.recipe_slider

@@ -66,12 +66,13 @@
 						/>
 				</div>
 				<a href="javascript:void(0)" class="next_video"></a>
-
-				<p><cms:text constant="title_recipe_show"/></p>
-				<label>
-					<input type="checkbox" id="recipe"/>
-					<span><cms:text constant="button_recipe"/></span>
-				</label>
+				<cms:desktop>
+					<p><cms:text constant="title_recipe_show"/></p>
+					<label>
+						<input type="checkbox" id="recipe"/>
+						<span><cms:text constant="button_recipe"/></span>
+					</label>
+				</cms:desktop>
 			</section>
 
 			<section id="recipes">

@@ -1,8 +1,27 @@
 <document>
-	<li>
-		<a href="javascript:void(0)">
-			<img src="$params['image']" alt="$params['title'][$language]" cms:eval="src,alt"/>
-			<cms:markdown param="description" multilanguage="yes"/>
-		</a>
-	</li>
+	<cms:desktop>
+		<li>
+			<a href="javascript:void(0)">
+				<img 
+					 src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_HEIGHT)"
+					 alt="$params['title'][$language]"
+					 cms:eval="src,alt"
+					/>
+				<cms:markdown param="description" multilanguage="yes"/>
+			</a>
+		</li>
+	</cms:desktop>
+
+	<cms:mobile>
+		<li>
+			<a href="javascript:void(0)">
+				<img 
+					 src="gallery::getThumbnailById($params['id'], null, 120, Thumbnail::CONSTRAIN_HEIGHT)"
+					 alt="$params['title'][$language]"
+					 cms:eval="src,alt"
+					/>
+				<cms:markdown param="description" multilanguage="yes"/>
+			</a>
+		</li>
+	</cms:mobile>
 </document>
