@@ -16,17 +16,18 @@
 	</cms:desktop>
 
 	<cms:mobile>
-		<a
-			class="youtube mobile"
-			href="'http://www.youtube.com/watch?v='.$params['video_id']"
-			title="$params['title'][$language]"
-			cms:eval="href,title"
-			>
-			<img
-				src="$params['thumbnail']"
-				alt="$params['title'][$language]"
-				cms:eval="src,alt"
+		<div class="video">
+			<cms:module
+				name="youtube"
+				action="show"
+				id="$params['id']"
+				embed="1"
+				width="230"
+				height="152"
+				enable_api="1"
+				cms:eval="id"
+				allowfullscreen="true"
 			/>
-		</a>
+		</div>
 	</cms:mobile>
 </document>
