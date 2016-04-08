@@ -5,6 +5,12 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<!-- Page description -->
+			<cms:module 
+				name="page_info" 
+				action="set_description" 
+				article="about"
+				/>
 			<link href='https://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'/>
 			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBNLUvJ---XR3OJrvw4OSoSUGMr9t-BDZI"></script>
 			<cms:collection include="page_control"/>
@@ -104,7 +110,7 @@
 				
 
 				<div id="form_wrap">
-					<cms:text constant="title_form"/>
+					<p><cms:text constant="title_form"/></p>
 					<cms:module
 						name="contact_form"
 						action="show"

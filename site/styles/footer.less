@@ -8,24 +8,12 @@ footer {
 	display: block;
 	text-align: center;
 	padding: 20px calc(~'(100vw - 1200px)'/ 2);
-	background-image: url(../images/footer-background.jpg);
+	background-image: url(../images/logo.svg),url(../images/footer-background.jpg);
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: calc(~'(50% + 350px)') 100%, center top;
+	background-size: 450px 450px, 1920px 1511px;
 	min-height: 1460px;
 	position: relative;
-}
-
-footer:before {
-	content: "";
-	position: absolute;
-	bottom: -18px;
-	right: 360px;
-	background-image: url(../images/logo.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 490px 490px;
-	width: 490px;
-	height: 490px;
 }
 
 footer h2 {
@@ -134,4 +122,121 @@ article.testimonial div.content p {
 
 article.testimonial div.content p:last-of-type {
 	font-size: 1.5em;
+}
+
+// form 
+
+div#form_wrap {
+	position: absolute;
+	bottom: 40px;
+	left: calc(~'(50% - 600px)');
+	border: 1px solid @color_ac_white;
+	background-color: fade(@color_ac_white, 80%);
+	width: 600px;
+}
+
+div#form_wrap p {
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: @color_ac_white;
+	font-weight: 700;
+	font-size: 1.8em;
+	background-color: rgba(52, 40, 43, 0.7);;
+}
+
+div#form_wrap form {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 90%;
+	text-align: right;
+}
+
+div#form_wrap form label {
+	display: block;
+	margin-top: 15px;
+	position: relative;
+}
+
+div#form_wrap form label:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	right: 0px;
+	background-image: url(../images/form-icons.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 200px 50px;
+	width: 50px;
+	height: 50px;
+}
+
+div#form_wrap form label:nth-of-type(1):before {
+	background-position: -100px 0px;
+}
+
+div#form_wrap form label:nth-of-type(2):before {
+	background-position: -50px 0px;
+}
+
+div#form_wrap form label:nth-of-type(3):before {
+	background-position: -0px 0px;
+}
+
+div#form_wrap form label span {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 50px;
+	width: 80px;
+	white-space: wrap;
+	font-size: 1.5em;
+}
+
+div#form_wrap form label input {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-color: fade(@color_ac_white, 60%);
+	border: 1px solid @color_text;
+	width: calc(~'(100% - 170px)');
+	transition: all 0.3s;
+}
+
+div#form_wrap form label input:hover {
+	background-color: fade(@color_ac_white, 80%);
+}
+
+div#form_wrap form label input:hover {
+	background-color: @color_ac_white;
+}
+
+div#form_wrap form div.controls {
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center
+}
+
+div#form_wrap form div.controls button {
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 45px;
+	padding-right: 45px;
+	border: none;
+	font-size: 1.5em;
+	background-color: @color_ac_orange;
+	color: @color_ac_white;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+div#form_wrap form div.controls button:hover {
+	background-color: fade(@color_ac_orange, 70%);
 }
