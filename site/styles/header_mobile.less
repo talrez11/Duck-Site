@@ -1,0 +1,85 @@
+/**
+ * Header mobile Style Sheet
+ * Duck Site
+ * Authors:Tal Reznic
+ */
+
+header {
+	display: block;
+	text-align: center;
+	background-image: url(../images/mobile-header-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	min-height: 475px;
+}
+
+div.mobile_title {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: @color_ac_black;
+}
+
+div.mobile_title a.logo {
+	display: inline-block;
+	position: relative;
+	width: 64px;
+}
+
+div.mobile_title a.logo img {
+	display: block;
+	width: 100%;
+}
+
+div.mobile_title a.menu {
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	margin-top: -2.5px;
+	height: 5px;
+	width: 35px;
+	background-color: @color_ac_white;
+	transition: all 0.6s;
+}
+
+div.mobile_title a.menu:before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	right: 0%;
+	height: 5px;
+	width: 100%;
+	background-color: @color_ac_white;
+}
+
+div.mobile_title a.menu:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: 0%;
+	height: 5px;
+	width: 100%;
+	background-color: @color_ac_white;
+}
+
+div.mobile_title.visible a.menu {
+	right: -15px;
+}
+
+nav.mobile_menu {
+	text-align: right;
+	top: 80px !important;
+}
+
+nav.mobile_menu a {
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-weight: 700;
+	border-bottom: 1px solid @color_ac_grey;
+}
+
+nav.mobile_menu.visible {
+	width: 100%;
+}

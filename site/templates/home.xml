@@ -19,7 +19,13 @@
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<!-- Top section of the site -->
-			<cms:template file="parts/header.xml"/>
+			<cms:desktop>
+				<cms:template file="parts/header.xml"/>
+			</cms:desktop>
+
+			<cms:mobile>
+				<cms:template file="parts/header_mobile.xml"/>
+			</cms:mobile>
 
 			<section id="features">
 				<ul>

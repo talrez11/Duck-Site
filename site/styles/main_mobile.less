@@ -1,0 +1,40 @@
+/**
+ * Main mobile Style Sheet
+ * Duck - Site
+ * Author: Tal Reznic
+ */
+
+@color_ac_black: #231f20;
+@color_ac_white: white;
+@color_ac_grey: #f4f2f4;
+@color_ac_orange: #e84c0f;
+@color_text: #5d5a26;
+@color_features_border: #cccac2;
+@color_border_green: #5d5a26;
+
+@import "header_mobile.less";
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+body {
+	background-color: white;
+	color: @color_text;
+	font-family: 'Alef', sans-serif;
+	padding-top: 80px;
+}
+input,
+select,
+textarea,
+button {
+	font-family: 'Alef', sans-serif;
+	font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Alef', sans-serif;
+	font-weight: 700;
+	color: @color_text;
+}

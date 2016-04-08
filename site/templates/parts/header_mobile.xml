@@ -1,0 +1,17 @@
+<document>
+	<header>
+		<div class="mobile_title">
+			<a href="url_Make('','home')" class="logo" cms:eval="href">
+				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
+			</a>
+		</div>
+
+		<nav class="mobile_menu">
+			<a href="#features"><cms:text constant="menu_about"/></a>
+			<a href="#grow"><cms:text constant="menu_growth"/></a>
+			<a href="#map"><cms:text constant="menu_location"/></a>
+			<a href="#testimonial"><cms:text constant="menu_testimonial"/></a>
+			<a href="#form_wrap"><cms:text constant="menu_contact"/></a>
+		</nav>
+	</header>
+</document>
