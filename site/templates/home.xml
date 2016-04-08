@@ -115,7 +115,6 @@
 					<a href="javascript:void(0)" class="next_testimonial"></a>
 				</div>
 				
-
 				<div id="form_wrap">
 					<p><cms:text constant="title_form"/></p>
 					<cms:module
