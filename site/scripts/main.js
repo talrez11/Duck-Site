@@ -125,8 +125,9 @@ Site.on_load = function() {
 	  ];
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-	zoom: 8,
-	center: new google.maps.LatLng(31.9743357,34.8072087),
+	zoom: 9,
+	scrollwheel: false,
+	center: new google.maps.LatLng(32.2790095,34.8393929,15),
 	mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
 
