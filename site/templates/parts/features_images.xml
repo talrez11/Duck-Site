@@ -1,7 +1,7 @@
 <document>
 	<cms:desktop>
 		<li>
-			<a href="javascript:void(0)">
+			<a href="'#'.$params['text_id']" cms:eval="href">
 				<img 
 					 src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_HEIGHT)"
 					 alt="$params['title'][$language]"
@@ -14,7 +14,7 @@
 
 	<cms:mobile>
 		<li>
-			<a href="javascript:void(0)">
+			<a href="'#'.$params['text_id']" cms:eval="href">
 				<img 
 					 src="gallery::getThumbnailById($params['id'], null, 120, Thumbnail::CONSTRAIN_HEIGHT)"
 					 alt="$params['title'][$language]"
