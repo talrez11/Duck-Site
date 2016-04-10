@@ -107,7 +107,7 @@ Site.on_load = function() {
 		}
 	});
 
-	if($('div.map').length > 0) {
+	if($('div#map').length > 0) {
 	// Google maps
 		var locations = [
 		    ['ראשון לציון, ברשבסקי 33 א.ת. ישן', 31.9743357,34.8072087],
