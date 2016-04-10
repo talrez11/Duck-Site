@@ -182,11 +182,11 @@ section#video label span {
 section#recipes div.recipe_wrapper {
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
+	width: 95%;
 	background-color: @color_ac_white;
 	position: relative;
-	min-height: 1500px;
-	overflow: hidden;
+	min-height: 600px;
+	overflow-y: scroll;
 	transition: all 0.6s;
 }
 
@@ -216,6 +216,7 @@ article.recipe img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 20px;
 	width: 100%;
 }
 
@@ -235,9 +236,9 @@ section#grow {
 	width: 100%;
 	background-image: url(../images/mobile-texture-middle.jpg);
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: center bottom;
 	background-size: 100% auto;
-	min-height: 550px;
+	min-height: 565px;
 }
 
 section#grow h2 {
@@ -251,6 +252,21 @@ section#grow p {
 	margin-right: auto;
 	font-size: 1em;
 	text-align: right;
+}
+
+section#grow a {
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 45px;
+	padding-right: 45px;
+	border-radius: 10px;
+	border: 2px solid @color_ac_white;
+	background-color: @color_ac_orange;
+	color: @color_ac_white;
+	cursor: pointer;
+	transition: all 0.3s;
 }
 
 section#map {
