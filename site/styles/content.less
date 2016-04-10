@@ -74,6 +74,20 @@ section#video:before {
 	z-index: -1;
 }
 
+section#video:after {
+	content: "";
+	position: absolute;
+	top: 59%;
+	left: 50%;
+	margin-left: -475px;
+	background-image: url(../images/shadow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 970px;
+	height: 60px;
+	z-index: -1;
+}
+
 section#features ul {
 	display: block;
 	margin: 0px;
@@ -168,8 +182,6 @@ section#video div.video_container {
 	vertical-align: middle;
 	margin-left: 20px;
 	margin-right: 20px;
-	margin-top: 5px;
-	margin-bottom: 5px;
 	width: 650px;
 	height: 432px;
 	overflow: hidden;
