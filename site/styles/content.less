@@ -346,3 +346,31 @@ section#map:before {
 	height: 245px;
 	z-index: 10;
 }
+
+/**
+ * Tablet version
+ */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+section#features ul li a img {
+	width: 90%;
+}
+
+section#grow,
+section#recipes,
+section#video,
+section#features {
+	padding: 20px calc(~'(100vw - 900px)'/ 2);
+}
+
+section#video:before {
+	bottom: -50px;
+}
+
+article.recipe {
+	margin-right: -400px;
+	width: 800px;
+}
+
+}
