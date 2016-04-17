@@ -78,18 +78,13 @@
 			</section>
 
 			<section id="recipes">
-				<div class="recipe_wrapper">
-					<a href="javascript:void(0)" class="previous_recipe"></a>
-					<h2><cms:text constant="title_recipe"/></h2>
-					<a href="javascript:void(0)" class="next_recipe"></a>
-
+				<h2><cms:text constant="title_recipe"/></h2>
 					<cms:module
-						name="articles"
-						action="show_list"
+						name="gallery"
+						action="show_image_list"
 						group="recipes"
-						template="parts/recipe_article.xml"
+						template="parts/recipe_preview.xml"
 						/>
-				</div>
 			</section>
 
 			<section id="grow">

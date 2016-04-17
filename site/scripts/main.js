@@ -81,13 +81,6 @@ Site.on_load = function() {
 			.setWrapAround(true);
 	}
 
-	// create page control for recipes 
-	Site.recipe_slider = new PageControl('div.recipe_wrapper', 'article.recipe');
-	Site.recipe_slider
-		.attachPreviousControl($('a.previous_recipe'))
-		.attachNextControl($('a.next_recipe'))
-		.setWrapAround(true);
-
 	// create page control for testimonials 
 	Site.testimonial_slider = new PageControl('div.testimonial_container', 'article.testimonial');
 	Site.testimonial_slider

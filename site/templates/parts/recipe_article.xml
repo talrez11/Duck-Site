@@ -1,9 +1,9 @@
 <document>
-	<article class="recipe">
+	<article>
 		<img src="_BASEURL.'/site/images/decoration1.svg'"  alt="decoration1" cms:eval="src"/>
-		<p class="title"><cms:var param="title" multilanguage="yes"/></p>
+		<h2 class="title"><cms:var param="title" multilanguage="yes"/></h2>
 		<img src="_BASEURL.'/site/images/decoration2.svg'"  alt="decoration2" cms:eval="src"/>
-		<cms:markdown param="content" multilanguage="yes"/>
+		<cms:markdown param="description" multilanguage="yes"/>
 		<img src="_BASEURL.'/site/images/decoration3.svg'"  alt="decoration3" cms:eval="src"/>
 	</article>
 </document>

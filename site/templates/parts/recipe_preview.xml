@@ -1,0 +1,10 @@
+<document>
+	<a href="url_Make('','recipe', array('id', $params['id']))" cms:eval="href">
+		<img 
+			src="gallery::getThumbnailById($params['id'], null, 150, Thumbnail::CONSTRAIN_WIDTH)" 
+			alt="$params['title'][$language]" 
+			cms:eval="src,alt"
+			/>
+		<h4><cms:var param="title" multilanguage="yes"/></h4>
+	</a>
+</document>

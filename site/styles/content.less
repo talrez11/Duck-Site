@@ -4,6 +4,7 @@
  * Authors:Tal Reznic
  */
 
+section#recipe_details,
 section#grow,
 section#recipes,
 section#video,
@@ -11,6 +12,26 @@ section#features {
 	display: block;
 	padding: 20px calc(~'(100vw - 1200px)'/ 2);
 	text-align: center;
+}
+
+section#recipe_details {
+	padding: 20px calc(~'(100vw - 960px)'/ 2);
+}
+
+section#recipe_details article {
+	display: block;
+	text-align: right;
+}
+
+section#recipe_details article h2 {
+	text-align: center;
+}
+
+section#recipe_details article img {
+	display: block;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 section#grow {
@@ -24,31 +45,22 @@ section#grow {
 section#recipes {
 	background-color: @color_ac_grey;
 	padding: 0px;
+	margin: 0px;
 	max-height: 0px;
 	opacity: 0;
-	transition: max-height 0.6s, opacity 0.2s;
+	transition: max-height 0.6s, opacity 0.3s, padding 0.3s;
+	transition-delay: 0.3s, 0s, 0.3s;
 	position: relative;
 }
 
-section#recipes:before {
-	content: "";
-	position: absolute;
-	top: 95%;
-	left: 50%;
-	margin-left: -475px;
-	background-image: url(../images/shadow.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	width: 970px;
-	height: 60px;
-	z-index: 0;
-}
 
 section#recipes.visible {
 	max-height: 1700px;
 	padding:20px calc(~'(100vw - 1200px)'/ 2);
 	opacity: 1;
 	transition: max-height 0.6s, opacity 0.3s;
+	transition-delay: 0s, 0.4s;
+
 }
 
 section#video {
@@ -188,8 +200,6 @@ section#video div.video_container {
 	position: relative;
 }
 
-section#recipes a.next_recipe,
-section#recipes a.previous_recipe,
 section#video a.previous_video,
 section#video a.next_video {
 	display: inline-block;
@@ -204,7 +214,6 @@ section#video a.next_video {
 	transition: all 0.3s;
 }
 
-section#recipes a.next_recipe,
 section#video a.next_video {
 	transform: rotate(180deg);
 }
@@ -256,64 +265,34 @@ section#video label span {
 	color: @color_ac_white;
 }
 
-section#recipes div.recipe_wrapper {
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-	background-color: @color_ac_white;
-	box-shadow: 0px 0px 8px fade(@color_border_green, 50%);
-	position: relative;
-	min-height: 0px;
-	overflow: hidden;
-	transition: all 0.6s;
-}
-
-section#recipes.visible div.recipe_wrapper {
-	min-height: 900px;
-	overflow-y: scroll;
-	padding-bottom: 20px;
-}
-
 section#recipes h2 {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 20px;
-	padding-right: 20px;
+	display: block;
+	text-align: center;
+	margin: 0px;
+	padding-bottom: 20px;
 	font-size: 2.8em;
 	font-weight: 400;
 }
 
-article.recipe {
-	position: absolute;
-	top: 150px;
-	right: -150%;
-	margin-right: -450px;
-	width: 900px;
-	transition: all 0.6s;
-}
-
-article.recipe.visible {
-	right: 50%;
-}
-
-article.recipe img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-	width: 45%;
-}
-
-article.recipe p.title {
+section#recipes a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
 	text-align: center;
-	font-size: 1.8em;
-	font-weight: 700;
+	color: @color_text;
+	border: 1px solid #cccac2;
+	width: calc(25% - 2px);
+	min-height: 275px;
 }
 
-article.recipe p {
-	font-size: 1.3em;
-	line-height: 100%;
-	text-align: right;
+section#recipes a h4 {
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: all 0.3s;
+}
+
+section#recipes a:hover h4 {
+	color: @color_ac_orange;
 }
 
 section#grow h2 {
@@ -366,11 +345,6 @@ section#features {
 
 section#video:before {
 	bottom: -50px;
-}
-
-article.recipe {
-	margin-right: -400px;
-	width: 800px;
 }
 
 }
