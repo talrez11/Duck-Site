@@ -7,7 +7,7 @@
 				id="$params['id']"
 				embed="1"
 				width="650"
-				height="432"
+				height="380"
 				enable_api="1"
 				cms:eval="id"
 				allowfullscreen="true"

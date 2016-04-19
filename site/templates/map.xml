@@ -12,7 +12,11 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<section id="map"></section>
+			<section class="location">
+				<h2><cms:text constant="title_map"/></h2>
+				<p><cms:text constant="sub_title_map"/></p>
+				<div id="map"></div>
+			</section>
 		</body>
 	</html>
 </document>

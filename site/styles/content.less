@@ -48,6 +48,7 @@ section#recipes {
 	margin: 0px;
 	max-height: 0px;
 	opacity: 0;
+	visibility: hidden;
 	transition: max-height 0.6s, opacity 0.3s, padding 0.3s;
 	transition-delay: 0.3s, 0s, 0.3s;
 	position: relative;
@@ -58,6 +59,7 @@ section#recipes.visible {
 	max-height: 1700px;
 	padding:20px calc(~'(100vw - 1200px)'/ 2);
 	opacity: 1;
+	visibility: visible;
 	transition: max-height 0.6s, opacity 0.3s;
 	transition-delay: 0s, 0.4s;
 
@@ -178,6 +180,7 @@ section#features img.stamp {
  * Video section
  */
 
+section.location h2,
 section#video h2 {
 	font-size: 2.5em;
 	padding-top: 15px;
@@ -189,13 +192,17 @@ section#video h2 {
 	color: @color_ac_white;
 }
 
+section.location h2 {
+	margin: 0px;
+}
+
 section#video div.video_container {
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 20px;
 	margin-right: 20px;
 	width: 650px;
-	height: 432px;
+	height: 380px;
 	overflow: hidden;
 	position: relative;
 }
@@ -231,6 +238,16 @@ section#video div.video.transit {
 
 section#video div.video.visible {
 	right: 0%;
+}
+
+section.location p,
+section#video p:first-of-type {
+	padding: 0px;
+	color: @color_text;
+}
+
+section.location p {
+	font-size: 2em;
 }
 
 section#video p {
@@ -304,15 +321,20 @@ section#grow p {
 	font-size: 1.5em;
 }
 
-// google map 
+// google map
 
-section#map {
+section.location {
+	text-align: center;
+	background-color: @color_ac_grey;
+}
+
+div#map {
 	width: 100%;
 	height: 700px;
 	position: relative;
 }
 
-section#map:before {
+div#map:before {
 	content: "";
 	position: absolute;
 	top:-1px;

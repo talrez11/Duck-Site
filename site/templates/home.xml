@@ -55,7 +55,7 @@
 
 			<section id="video">
 				<h2><cms:text constant="title_video"/></h2>
-
+				<p><cms:text constant="sub_title_video"/></p>
 				<a href="javascript:void(0)" class="previous_video"></a>
 				<div class="video_container">
 					<cms:module
@@ -86,25 +86,45 @@
 						template="parts/recipe_preview.xml"
 						/>
 			</section>
-
-			<section id="grow">
-				<cms:module
-					name="articles"
-					action="show"
-					text_id="grow"
-					template="parts/article.xml"
-					/>
+			
+			<cms:desktop>
+				<section id="grow">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="grow"
+						template="parts/article.xml"
+						/>
+				</section>
+			</cms:desktop>
+			<!-- Section#grow mobile version -->
+			<cms:mobile>
+				<section id="grow">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="grow"
+						template="parts/article.xml"
+						/>
 				<!-- Link to map page on mobile version -->
-				<cms:mobile>
 					<a href="url_Make('','location')" cms:eval="href">
 						<cms:text constant="button_show_map"/>
 					</a>
-				</cms:mobile>
 
-			</section>
+					<img 
+						src="_BASEURL.'/site/images/mobile-texture-bottom.jpg'"  
+						alt="texture-bottom"
+						cms:eval="src"
+						/>
+				</section>
+			</cms:mobile>
 
 			<cms:desktop>
-				<section id="map"></section>
+				<section class="location">
+					<h2><cms:text constant="title_map"/></h2>
+					<p><cms:text constant="sub_title_map"/></p>
+					<div id="map"></div>
+				</section>
 			</cms:desktop>
 
 			<!-- Bottom part of the site -->
