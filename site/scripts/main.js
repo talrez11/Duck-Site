@@ -86,7 +86,7 @@ Site.on_load = function() {
 	Site.testimonial_slider
 		.attachPreviousControl($('a.previous_testimonial'))
 		.attachNextControl($('a.next_testimonial'))
-		.setInterval(6000)
+		.setInterval(8000)
 		.setWrapAround(true);
 
 	// function for displaying recipe section
