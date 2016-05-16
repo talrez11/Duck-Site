@@ -7,6 +7,7 @@
 footer {
 	display: block;
 	text-align: center;
+	position: relative;
 }
 
 footer div.top {
@@ -223,4 +224,30 @@ div#form_wrap form div.controls button {
 
 div#form_wrap form div.controls button:hover {
 	background-color: fade(@color_ac_orange, 70%);
+}
+
+div.copy {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	direction: ltr;
+	text-align: center;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: black;
+}
+
+div.copy img {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 20%;
+}
+
+div.copy span {
+	display: inline-block;
+	vertical-align: bottom;
+	color: @color_ac_white;
+	font-size: 0.8em;
 }

@@ -150,6 +150,12 @@
 							text_id="contact"
 							/>
 					</div>
+
+					<div class="copy">
+						<img src="_BASEURL.'/site/images/crazy.svg'" alt="krazy_logo" cms:eval="src"/>
+						<span><cms:text constant="title_copyright"/></span>
+					</div>
+
 				</footer>
 			</cms:desktop>
 
@@ -177,6 +183,12 @@
 							text_id="contact"
 							/>
 					</div>
+
+					<div class="copy">
+						<img src="_BASEURL.'/site/images/crazy.svg'" alt="krazy_logo" cms:eval="src"/>
+						<span><cms:text constant="title_copyright"/></span>
+					</div>
+
 				</footer>
 			</cms:mobile>
 		</body>
