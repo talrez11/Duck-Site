@@ -7,7 +7,13 @@
 			<title>
 				<cms:text constant="site_title"/>
 				<cms:raw text=" - "/>
-				<cms:text constant="title_recipe"/>
+				<cms:module
+					name="gallery"
+					action="show_image"
+					id="$_REQUEST['id']"
+					template="parts/recipe_title.xml"
+					cms:eval="id"
+					/>
 			</title>
 			<!-- Page description -->
 			<link href='https://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'/>
@@ -16,14 +22,14 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<section id="recipes">
-				<h2><cms:text constant="title_recipe"/></h2>
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="recipes"
-						template="parts/recipe_preview.xml"
-						/>
+			<section id="recipe_details">
+				<cms:module
+					name="gallery"
+					action="show_image"
+					id="$_REQUEST['id']"
+					template="parts/recipe_article.xml"
+					cms:eval="id"
+					/>
 			</section>
 		</body>
 	</html>

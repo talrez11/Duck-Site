@@ -34,6 +34,12 @@ section#recipe_details article img {
 	margin-right: auto;
 }
 
+section#recipe_details article img.recipe {
+	display: block;
+	margin-bottom: 15px;
+	height: auto;
+}
+
 section#grow {
 	padding: 100px calc(~'(100vw - 800px)'/ 2);
 	background-image: url(../images/texture-middle.jpg);
@@ -43,24 +49,8 @@ section#grow {
 }
 
 section#recipes {
-	background-color: @color_ac_grey;
-	padding: 0px;
-	margin: 0px;
-	max-height: 0px;
-	opacity: 0;
-	visibility: hidden;
-	transition: max-height 0.6s, opacity 0.3s, padding 0.3s;
-	transition-delay: 0.3s, 0s, 0.3s;
+	display: block;
 	position: relative;
-}
-
-section#recipes.visible {
-	max-height: 1700px;
-	padding:20px calc(~'(100vw - 1200px)'/ 2);
-	opacity: 1;
-	visibility: visible;
-	transition: max-height 0.6s, opacity 0.3s;
-	transition-delay: 0s, 0.4s;
 }
 
 section#video {
@@ -254,8 +244,9 @@ section#video p {
 	color: @color_ac_white;
 }
 
-section#video label {
+section#video a.link {
 	display: inline-block;
+	text-decoration: none;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-left: 45px;
@@ -263,21 +254,14 @@ section#video label {
 	border-radius: 10px;
 	border: 2px solid @color_ac_white;
 	background-color: @color_ac_orange;
+	font-size: 1.7em;
+	color: @color_ac_white;
 	cursor: pointer;
 	transition: all 0.3s;
 }
 
-section#video label:hover {
+section#video a.link:hover {
 	background-color: fade(@color_ac_orange, 70%);
-}
-
-section#video label input {
-	display: none;
-}
-
-section#video label span {
-	font-size: 1.7em;
-	color: @color_ac_white;
 }
 
 section#recipes h2 {

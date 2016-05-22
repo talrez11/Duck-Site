@@ -1,5 +1,5 @@
 <document>
-	<a href="url_Make('','recipe', array('id', $params['id']))" cms:eval="href">
+	<a href="url_Make('view','recipe', array('id', $params['id']))" cms:eval="href">
 		<img 
 			src="gallery::getThumbnailById($params['id'], null, 150, Thumbnail::CONSTRAIN_WIDTH)" 
 			alt="$params['title'][$language]" 

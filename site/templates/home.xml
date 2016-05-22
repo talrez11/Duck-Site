@@ -69,22 +69,11 @@
 
 				<cms:desktop>
 					<p><cms:text constant="title_recipe_show"/></p>
-					<label>
-						<input type="checkbox" id="recipe"/>
-						<span><cms:text constant="button_recipe"/></span>
-					</label>
+					<a  class="link" href="url_Make('','recipe')" cms:eval="href">
+						<cms:text constant="button_recipe"/>
+					</a>
 				</cms:desktop>
 
-			</section>
-
-			<section id="recipes">
-				<h2><cms:text constant="title_recipe"/></h2>
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="recipes"
-						template="parts/recipe_preview.xml"
-						/>
 			</section>
 			
 			<cms:desktop>
