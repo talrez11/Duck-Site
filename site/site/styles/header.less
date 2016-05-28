@@ -1,0 +1,76 @@
+/**
+ * Main Style Sheet
+ * Duck Site
+ * Authors:Tal Reznic
+ */
+
+header {
+	display: block;
+	text-align: center;
+	background-image: url(../images/header-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 700px;
+}
+
+div#menu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 100000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: @color_ac_black;
+}
+
+div#menu a.logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 80px;
+}
+
+div#menu a.logo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+div#menu nav {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 40px;
+}
+
+div#menu nav a {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 1.2em;
+	font-weight: 700;
+	text-decoration: none;
+	color: @color_ac_white;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+}
+
+div#menu nav a:before {
+	content: "";
+	position: absolute;
+	top: 90%;
+	left: -105%;
+	height: 1px;
+	width: 100%;
+	background-color: @color_ac_orange;
+	transition: all 0.3s;
+}
+
+div#menu nav a:hover:before {
+	left: 0%;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="title_recipe"/>
+			</title>
+			<!-- Page description -->
+			<link href='https://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'/>
+			<cms:collection include="page_control"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<section id="recipes">
+				<h2><cms:text constant="title_recipe"/></h2>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="recipes"
+						template="parts/recipe_preview.xml"
+						/>
+			</section>
+		</body>
+	</html>
+</document>

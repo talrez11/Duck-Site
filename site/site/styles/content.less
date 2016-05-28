@@ -1,0 +1,359 @@
+/**
+ * Main Style Sheet
+ * Duck Site
+ * Authors:Tal Reznic
+ */
+
+section#recipe_details,
+section#grow,
+section#recipes,
+section#video,
+section#features {
+	display: block;
+	padding: 20px calc(~'(100vw - 1200px)'/ 2);
+	text-align: center;
+}
+
+section#recipe_details {
+	padding: 20px calc(~'(100vw - 960px)'/ 2);
+}
+
+section#recipe_details article {
+	display: block;
+	text-align: right;
+}
+
+section#recipe_details article h2 {
+	text-align: center;
+}
+
+section#recipe_details article img {
+	display: block;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section#recipe_details article img.recipe {
+	display: block;
+	margin-bottom: 15px;
+	height: auto;
+}
+
+section#grow {
+	padding: 100px calc(~'(100vw - 800px)'/ 2);
+	background-image: url(../images/texture-middle.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 500px;
+}
+
+section#recipes {
+	display: block;
+	position: relative;
+}
+
+section#video {
+	background-image: url(../images/video-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 960px;
+	position: relative;
+	z-index: 0;
+}
+
+section#video:before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	background-image: url(../images/video-grunge-bottom-vector.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 1920px 200px;
+	width: 100%;
+	height: 200px;
+	z-index: -1;
+}
+
+section#video:after {
+	content: "";
+	position: absolute;
+	top: 59%;
+	left: 50%;
+	margin-left: -475px;
+	background-image: url(../images/shadow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 970px;
+	height: 60px;
+	z-index: -1;
+}
+
+section#features ul {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	margin-top: -80px;
+	margin-bottom: 40px;
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section#features ul li {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 20px;
+	background-image: url(../images/features-background-for-feature.jpg);
+	background-repeat: repeat;
+	background-position: center center;
+	background-size: 300px 320px;
+	border: 1px solid @color_features_border;
+	width: calc(~'(25% - 2px)');
+	min-height: 280px;
+}
+
+section#features ul li:hover img {
+	border-color: @color_ac_orange;
+	opacity: 1;
+}
+
+section#features ul li a {
+	display: block;
+	text-decoration: none;
+}
+
+section#features ul li a img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid @color_ac_white;
+	opacity: 0.8;
+	transition: all 0.6s;
+}
+
+section#features ul li a h4,
+section#features ul li a p {
+	margin: 0px;
+	font-weight: 400;
+	color: @color_text;
+}
+
+section#features ul li a h4 {
+	font-size: 1.5em;
+}
+
+section#features img.stamp,
+section#features article {
+	display: inline-block;
+	vertical-align: top;
+}
+
+section#features article {
+	text-align: right;
+	width: 70%;
+}
+
+section#features article p {
+	font-size: 1.5em;
+}
+
+section#features img.stamp {
+	width: 25%;
+	margin-right: 5%;
+}
+
+/*
+ * Video section
+ */
+
+section.location h2,
+section#video h2 {
+	font-size: 2.5em;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	background-image: url(../images/title-ribbon.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 500px 105px;
+	color: @color_ac_white;
+}
+
+section.location h2 {
+	margin: 0px;
+}
+
+section#video div.video_container {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 650px;
+	height: 380px;
+	overflow: hidden;
+	position: relative;
+}
+
+section#video a.previous_video,
+section#video a.next_video {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 20px;
+	background-image: url(../images/video-arrow.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px 50px;
+	width: 20px;
+	height: 55px;
+	transition: all 0.3s;
+}
+
+section#video a.next_video {
+	transform: rotate(180deg);
+}
+
+section#video div.video {
+	position: absolute;
+	top: 0px;
+	right: -100%;
+	transition: all 0.6s;
+}
+
+section#video div.video.transit {
+	transition: none;
+}
+
+section#video div.video.visible {
+	right: 0%;
+}
+
+section.location p,
+section#video p:first-of-type {
+	padding: 0px;
+	color: @color_text;
+}
+
+section.location p {
+	font-size: 2em;
+}
+
+section#video p {
+	font-size: 2em;
+	padding-top: 100px;
+	color: @color_ac_white;
+}
+
+section#video a.link {
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 45px;
+	padding-right: 45px;
+	border-radius: 10px;
+	border: 2px solid @color_ac_white;
+	background-color: @color_ac_orange;
+	font-size: 1.7em;
+	color: @color_ac_white;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+section#video a.link:hover {
+	background-color: fade(@color_ac_orange, 70%);
+}
+
+section#recipes h2 {
+	display: block;
+	text-align: center;
+	margin: 0px;
+	padding-bottom: 20px;
+	font-size: 2.8em;
+	font-weight: 400;
+}
+
+section#recipes a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	text-align: center;
+	color: @color_text;
+	border: 1px solid #cccac2;
+	width: calc(25% - 2px);
+	min-height: 275px;
+	overflow: hidden;
+}
+
+section#recipes a h4 {
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: all 0.3s;
+}
+
+section#recipes a:hover h4 {
+	color: @color_ac_orange;
+}
+
+section#grow h2 {
+	font-weight: 400;
+	font-size: 2.5em;
+}
+
+section#grow p {
+	font-size: 1.5em;
+}
+
+// google map
+
+section.location {
+	text-align: center;
+	background-color: @color_ac_grey;
+}
+
+div#map {
+	width: 100%;
+	height: 700px;
+	position: relative;
+}
+
+div#map:before {
+	content: "";
+	position: absolute;
+	top:-1px;
+	left: 0px;
+	background-image: url(../images/map-grunge-top.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 1920px 245px;
+	width: 100%;
+	height: 245px;
+	z-index: 10;
+}
+
+/**
+ * Tablet version
+ */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+section#features ul li a img {
+	width: 90%;
+}
+
+section#grow,
+section#recipes,
+section#video,
+section#features {
+	padding: 20px calc(~'(100vw - 900px)'/ 2);
+}
+
+section.location {
+	padding-top: 20px;
+}
+
+section#video:before {
+	bottom: -50px;
+}
+
+}

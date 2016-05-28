@@ -1,0 +1,53 @@
+<document>
+	<cms:desktop>
+		<li>
+			<cms:if condition="$params['text_id'] == 'recipes'">
+				<a href="url_Make('','recipe')" cms:eval="href">
+					<img 
+						 src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_HEIGHT)"
+						 alt="$params['title'][$language]"
+						 cms:eval="src,alt"
+						/>
+					<cms:markdown param="description" multilanguage="yes"/>
+				</a>
+			</cms:if>
+			
+			<cms:if condition="$params['text_id'] != 'recipes' ">
+				<a href="'#'.$params['text_id']" cms:eval="href">
+					<img 
+						 src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_HEIGHT)"
+						 alt="$params['title'][$language]"
+						 cms:eval="src,alt"
+						/>
+					<cms:markdown param="description" multilanguage="yes"/>
+				</a>
+			</cms:if>
+		</li>
+	</cms:desktop>
+
+	<cms:mobile>
+		<li>
+			<cms:if condition="$params['text_id'] == 'recipes'">
+				<a href="url_Make('','recipe')" cms:eval="href">
+					<img 
+						 src="gallery::getThumbnailById($params['id'], null, 120, Thumbnail::CONSTRAIN_HEIGHT)"
+						 alt="$params['title'][$language]"
+						 cms:eval="src,alt"
+						/>
+					<cms:markdown param="description" multilanguage="yes"/>
+				</a>
+			</cms:if>
+			
+			<cms:if condition="$params['text_id'] != 'recipes' ">
+				<a href="'#'.$params['text_id']" cms:eval="href">
+					<img 
+						 src="gallery::getThumbnailById($params['id'], null, 120, Thumbnail::CONSTRAIN_HEIGHT)"
+						 alt="$params['title'][$language]"
+						 cms:eval="src,alt"
+						/>
+					<cms:markdown param="description" multilanguage="yes"/>
+				</a>
+			</cms:if>
+		</li>
+	</cms:mobile>
+</document>

@@ -1,0 +1,33 @@
+<document>
+	<cms:desktop>
+		<div class="video">
+			<cms:module
+				name="youtube"
+				action="show"
+				id="$params['id']"
+				embed="1"
+				width="650"
+				height="380"
+				enable_api="1"
+				cms:eval="id"
+				allowfullscreen="true"
+			/>
+		</div>
+	</cms:desktop>
+
+	<cms:mobile>
+		<div class="video">
+			<cms:module
+				name="youtube"
+				action="show"
+				id="$params['id']"
+				embed="1"
+				width="230"
+				height="152"
+				enable_api="1"
+				cms:eval="id"
+				allowfullscreen="true"
+			/>
+		</div>
+	</cms:mobile>
+</document>
