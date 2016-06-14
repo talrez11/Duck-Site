@@ -8,6 +8,9 @@
 			<nav>
 				<a href="#features"><cms:text constant="menu_about"/></a>
 				<a href="#grow"><cms:text constant="menu_growth"/></a>
+				<a href="url_Make('','recipe')" cms:eval="href">
+					<cms:text constant="menu_recipes"/>
+				</a>
 				<a href="#map"><cms:text constant="menu_location"/></a>
 				<a href="#testimonial"><cms:text constant="menu_testimonial"/></a>
 				<a href="#form_wrap"><cms:text constant="menu_contact"/></a>

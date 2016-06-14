@@ -130,6 +130,19 @@
 							/>
 						<a href="javascript:void(0)" class="next_testimonial"></a>
 					</div>
+					<!-- Social links -->
+					<div class="social">
+						<h4><cms:text constant="title_social"/></h4>
+						<a href="https://www.facebook.com/barvazim.co.il/">
+							<img src="_BASEURL.'/site/images/facebook.png'"  alt="facebook-logo" cms:eval="src"/>
+						</a>
+						<a href="https://www.facebook.com/barvazim.co.il/">
+							<img src="_BASEURL.'/site/images/instagram.png'"  alt="instagram-logo" cms:eval="src"/>
+						</a>
+						<a href="https://www.pinterest.com/f6170989b1bb391/">
+							<img src="_BASEURL.'/site/images/pintarest.png'"  alt="pinterest-logo" cms:eval="src"/>
+						</a>
+					</div>
 					
 					<div id="form_wrap">
 						<p><cms:text constant="title_form"/></p>
@@ -162,8 +175,21 @@
 								/>
 							<a href="javascript:void(0)" class="next_testimonial"></a>
 						</div>
+						<!-- Social links -->
+						<div class="social">
+							<h4><cms:text constant="title_social"/></h4>
+							<a href="https://www.facebook.com/barvazim.co.il/">
+								<img src="_BASEURL.'/site/images/facebook.png'"  alt="facebook-logo" cms:eval="src"/>
+							</a>
+							<a href="https://www.facebook.com/barvazim.co.il/">
+								<img src="_BASEURL.'/site/images/instagram.png'"  alt="instagram-logo" cms:eval="src"/>
+							</a>
+							<a href="https://www.pinterest.com/f6170989b1bb391/">
+								<img src="_BASEURL.'/site/images/pintarest.png'"  alt="pinterest-logo" cms:eval="src"/>
+							</a>
+						</div>
 					</div>
-					
+
 					<div id="form_wrap">
 						<p><cms:text constant="title_form"/></p>
 						<cms:module

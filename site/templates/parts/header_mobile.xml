@@ -9,6 +9,9 @@
 		<nav class="mobile_menu">
 			<a href="#features"><cms:text constant="menu_about"/></a>
 			<a href="#grow"><cms:text constant="menu_growth"/></a>
+			<a href="url_Make('','recipe')" cms:eval="href">
+				<cms:text constant="menu_recipes"/>
+			</a>
 			<a href="url_Make('','location')" cms:eval="href">
 				<cms:text constant="menu_location"/>
 			</a>
